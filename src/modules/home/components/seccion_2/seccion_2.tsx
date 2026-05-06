@@ -4,7 +4,7 @@ import Modal from "../../../../shared/components/Modal/Modal";
 import CrudModal from "../../../../shared/components/Modal/CrudModal";
 
 // ✅ Importa tu componente Vender (ajusta la ruta si es necesario)
-import Vender from "./Vender";
+import Vender from "./vender";
 
 import {
   Producto, buscarProductosPorNombre, getImagenProducto, eliminarProductoPorId,
