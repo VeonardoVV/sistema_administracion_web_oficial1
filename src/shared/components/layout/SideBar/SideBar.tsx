@@ -39,7 +39,13 @@ const Sidebar = ({ setView }: SidebarProps) => {
       >
         Testimonios
       </div>
-
+      
+      <div 
+      className={styles.item}
+        onClick={() => navigate("/ventaferreteria")}
+      >
+        Detalles de Ventas
+      </div>
       
     </div>
   );

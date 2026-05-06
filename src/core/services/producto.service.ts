@@ -4,18 +4,28 @@ import { supabase } from "../../lib/supabase";
 export type Producto = {
   prdcid: number;
   prdcimgnombre: string;
-  prdcimgnombrebucket: string;
-  prdcprecio: number;
+  prdcimgnombrebucket: string | null;
+  prdcprecio: number | null;
+  prdcdescripcion: string | null;
+  prdcstock: number | null;
   ctgraid: number;
   marcaid: number;
-  categoria: { ctgraid: number; ctgraimgnombrebucket: string } | null;
-  marca: { marcaid: number; marcaimgnombrebucket: string } | null;
+  categoria: {
+    ctgraid: number;
+    ctgraimgnombrebucket: string;
+  } | null;
+  marca: {
+    marcaid: number;
+    marcaimgnombrebucket: string;
+  } | null;
 };
-const SELECT_PRODUCTO = `
+export const SELECT_PRODUCTO = `
   prdcid,
   prdcimgnombre,
   prdcimgnombrebucket,
   prdcprecio,
+  prdcdescripcion,
+  prdcstock,
   ctgraid,
   marcaid,
   categoria ( ctgraid, ctgraimgnombrebucket ),

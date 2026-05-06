@@ -8,6 +8,7 @@ import CarLayout from "../../shared/layouts/CarLayout";
 import BannerFerreteriaLayout from "../../shared/layouts/BannerFerreteriaLayout";
 import LogoFerreteriaLayout from "../../shared/layouts/LogoFerreteriaLayout";
 import TestimonioFerreteriaLayout from "../../shared/layouts/TestimonioFerreteriaLayout";
+import VentaFerreteriaLayout from "../../shared/layouts/VentaFerreteriaLayout";
 
 
 
@@ -22,6 +23,7 @@ import FerreteriaRoutes from "../../modules/ferreteria/routes/ferreteriaRoutes";
 import BannerFerreteriaRoutes from "../../modules/bannerferreteria/routes/bannerferreteriaRoutes";
 import LogoFerreteriaRoutes from "../../modules/logoferreteria/routes/logoferreteriaRoutes";
 import TestimonioFerreteriaRoutes from "../../modules/testimonioferreteria/routes/testimonioferreteriaRoutes";
+import VentaFerreteriaRoutes from "../../modules/ventaferreteria/routes/ventaferreteriaRoutes";
 
 export default function AppRoutes() {
     return (
@@ -58,6 +60,10 @@ export default function AppRoutes() {
 
                 <Route element={<TestimonioFerreteriaLayout />}>
                     {TestimonioFerreteriaRoutes}
+                
+                </Route>
+                    <Route element={<VentaFerreteriaLayout />}>
+                    {VentaFerreteriaRoutes}
                 </Route>
                 {/* rutas que estaran dentro del panel administrativo*/}
                 

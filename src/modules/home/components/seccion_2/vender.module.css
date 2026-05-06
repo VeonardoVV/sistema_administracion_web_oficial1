@@ -1,0 +1,139 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* BOTÓN VOLVER */
+.container > button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.container > button:hover {
+  background: #000;
+}
+
+/* GRID PRINCIPAL */
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+/* CARD IZQUIERDA */
+.grid > div:first-child {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* IMAGEN PRODUCTO */
+.img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* TITULO */
+h2 {
+  margin: 10px 0;
+  font-size: 22px;
+  color: #222;
+}
+
+/* DESCRIPCIÓN */
+p {
+  margin: 6px 0;
+  color: #555;
+}
+
+/* STOCK */
+p:nth-of-type(2) {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* INPUT CANTIDAD */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* TOTAL */
+h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #111;
+}
+
+/* LADO DERECHO */
+.grid > div:last-child {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* QR */
+.qr {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* INPUTS CLIENTE */
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* BOTÓN CONFIRMAR */
+.grid > div:last-child button {
+  width: 100%;
+  padding: 12px;
+  background: #00c853;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.grid > div:last-child button:hover {
+  background: #00a844;
+  transform: scale(1.02);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
